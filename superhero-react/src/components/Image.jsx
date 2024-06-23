@@ -1,9 +1,10 @@
 import "../css/image.css"
 
-const Image = ({ imageUrl }) => {
+const Image = ({ imageUrl, name }) => {
     return (
-        <div>
+        <div className="image-container">
             <img src={imageUrl} alt="superhero-name" />
+            <h3>{name}</h3>
         </div>
     )
 }
