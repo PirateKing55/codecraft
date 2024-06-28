@@ -11,7 +11,7 @@ function App() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
 
-  const TOKEN = "1f70b8d7a4d9c9e8630ddd81ae01079f"
+  const TOKEN = ""
   const BASE_URL = "https://cors-proxy-superhero-api.onrender.com"
 
   const getHeroDataByName = async (e) => {
