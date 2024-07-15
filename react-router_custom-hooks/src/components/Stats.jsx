@@ -1,7 +1,26 @@
 import useFetchData from "../hooks/useFetchData"
 import { useParams } from "react-router-dom"
+import { useState, useEffect } from "react"
 
 const Stats = () => {
+
+    // const [darkMode, setDarkMode] = useState(() => {
+    //     return localStorage.getItem('theme') === 'dark';
+    // });
+
+    // useEffect(() => {
+    //     if (darkMode) {
+    //         document.documentElement.classList.add('dark');
+    //         localStorage.setItem('theme', 'dark');
+    //     } else {
+    //         document.documentElement.classList.remove('dark');
+    //         localStorage.setItem('theme', 'light');
+    //     }
+    // }, [darkMode]);
+
+    // const toggleDarkMode = () => {
+    //     setDarkMode(!darkMode);
+    // };
 
     const params = useParams()
 
@@ -14,13 +33,16 @@ const Stats = () => {
 
     return (
         data && (
-            <ul className="pt-3">
+            <ul className="pt-3 dark:bg-gray-500">
                 {Object.entries(data).map(([stat, value]) => (
                     <li key={stat} className="text-xl">
                         <strong>{stat.charAt(0).toUpperCase() + stat.slice(1)}:</strong> {value}
                     </li>
                 ))}
+                {/* <button onClick={toggleDarkMode}>toggle</button> */}
+
             </ul>
+
         )
     );
 
